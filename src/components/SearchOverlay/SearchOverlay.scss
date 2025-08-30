@@ -1,0 +1,74 @@
+
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1817177e; 
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.3s;
+  .overlay-content {
+    height: 35%;
+    text-align: center;
+    color: #0c0c0c;
+    background-color: #fff;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 15px;
+      border: none;
+      font-size: 18px;
+      overflow: hidden;
+      outline:none;
+      border-bottom: 2px solid black;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 30px;
+      font-size: 40px;
+      background: transparent;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+.search-overlay.opening {
+  animation: slideDown 0.6s ease forwards;
+}
+
+.search-overlay.closing {
+  animation: slideUp 0.6s ease forwards;
+}
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
